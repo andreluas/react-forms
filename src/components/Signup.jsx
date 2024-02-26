@@ -10,14 +10,13 @@ export default function Signup() {
     const acquisitionChannel = fd.getAll("acquisition");
     const data = Object.fromEntries(fd.entries());
     data.acquisition = acquisitionChannel;
-    console.log(data);
 
     if (data.password !== data["confirm-password"]) {
       setPasswordsAreNotEqual(true);
       return;
     }
 
-    event.target.reset();
+    console.log(data);
   }
 
   return (
